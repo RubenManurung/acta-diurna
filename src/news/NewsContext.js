@@ -19,9 +19,9 @@ export const NewsContextProvider = (props) => {
 
     
 
-    useEffect(() => {
-        axios.get(`https://newsapi.org/v2/everything?q=${myNewsSession ? myNewsSession : "technology"}&from=${newdate}&to=${newdate}&sortBy=popularity&language=en&apiKey=${apiKey}`)
-        .then((response) => response.data ? setData(response.data) : console.log("Invalid") )
+    useEffect(async () => {
+        await axios.get(`https://newsapi.org/v2/everything?q=${myNewsSession ? myNewsSession : "technology"}&from=${newdate}&to=${newdate}&sortBy=popularity&language=en&apiKey=${apiKey}`)
+        .then((response) => response.data ? setData(response.data) : document.write("Data is empty"))
         .catch((error) => document.write(`<center><h3>${error}</h3></center>`));
     }, []);
 

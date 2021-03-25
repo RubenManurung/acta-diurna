@@ -1,5 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal';
+import '../style.css';
 
 export default function Footer() {
     let dateObj = new Date();
@@ -66,7 +67,12 @@ export default function Footer() {
                                 </ul>
                             </div>
                         </div>
-                        <p>© {dateObj.getUTCFullYear()} By<strong onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="span ml-2 text-danger" style={{cursor: "pointer"}}>Acta <span className="text-dark">Diurna 21<sup>st</sup></span></strong></p>
+                           
+                        <div className="tooltips">To the Top!</div>
+                        <p>© {dateObj.getUTCFullYear()} By
+                            <strong onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="span ml-2 text-danger" style={{cursor: "pointer"}}>Acta <span className="text-dark">Diurna 21<sup>st</sup></span></strong>
+                        </p>
+                         
                 </footer>
             </div>
         </Fade>

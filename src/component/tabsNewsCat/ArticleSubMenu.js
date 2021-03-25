@@ -3,6 +3,7 @@ import Fade from 'react-reveal';
 import RubberBand from 'react-reveal/RubberBand';
 
 function ArticleSubMenu(props) {
+    console.log(props)
     let {data} = props;
     let ExplodeUrl = data.url.split(".com");
 

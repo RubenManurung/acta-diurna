@@ -12,14 +12,14 @@ export const NewsSubTabsMenuProvider = (props) => {
     const mySubTab = sessionStorage.getItem('mySubTab');
     const myNewsSession = sessionStorage.getItem('newsSession');
 
-    useEffect(() => {
+    useEffect(async () => {
         myNewsSession === "business" 
         ?
-        axios.get(`https://newsapi.org/v2/top-headlines?country=${mySubTab}&category=business&apiKey=${apiKey}`)
+        await axios.get(`https://newsapi.org/v2/top-headlines?country=${mySubTab}&category=business&apiKey=${apiKey}`)
         .then((response) => response.data ? setData(response.data) : console.log("Invalid") )
         .catch((error) => document.write(`<center><h3>${error}</h3></center>`))
         :   
-        axios.get(`https://newsapi.org/v2/top-headlines?category=${myNewsSession ? myNewsSession : "technology"}&q=+${mySubTab ? mySubTab : "indonesia"}&apiKey=${apiKey}`)
+        await axios.get(`https://newsapi.org/v2/top-headlines?category=${myNewsSession ? myNewsSession : "technology"}&q=+${mySubTab ? mySubTab : "indonesia"}&apiKey=${apiKey}`)
         .then((response) => response.data ? setData(response.data) : console.log("Invalid") )
         .catch((error) => document.write(`<center><h3>${error}</h3></center>`));
     }, []);

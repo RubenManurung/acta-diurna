@@ -8,7 +8,7 @@ export default function ButtonTabs() {
     const myNewsSession = sessionStorage.getItem('newsSession');
     
     const tabMenu = [
-        ["Hardware",      "Mental",   "ID",  "Film",     "Politic",    "Astronomy",  "Athletic"],
+        ["Hardware",      "Mental",   "ID",  "Film",     "Politic",    "Astronom",  "Athletic"],
         ["Software",      "Virus",    "US",  "Music",    "Law",        "Biologi",    "Mind"],
         ["PlayStation",   "Vitamin",  "AU",  "Humour",   "Social",     "Physic",     "Air"],
         ["Robot",         "Blood",    "FR",  "Dance",    "History",    "Experiment", "Cycling"],

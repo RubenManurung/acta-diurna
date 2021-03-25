@@ -47,11 +47,11 @@ export default function NewsCategory() {
             {Object.entries(arrCat2).map(([k,v]) => 
                     
                 Object.entries(v).map((([key, val]) => 
-                    <div className="d-flex justify-content-center">
-                        <div class="card parent">
-                            <img class="card-img child" src={val} alt="Category" />
-                            <div class="card-img-overlay">
-                                <a onClick={getNavbar} href={key} key={k} className="cat-name">{k}</a>
+                    <div key={k} className="d-flex justify-content-center">
+                        <div className="card parent">
+                            <img className="card-img child" src={val} alt="Category" />
+                            <div className="card-img-overlay">
+                                <a onClick={getNavbar} href={key} className="cat-name">{k}</a>
                             </div>
                         </div>
                     </div>

@@ -11,7 +11,7 @@ function News() {
 
     return (
         <>
-            <h3 className="d-flex justify-content-center p-2">{myNewsSession ? myNewsSession.charAt(0).toUpperCase() + myNewsSession.slice(1) : "Technology"}</h3>
+            <h3 className="d-flex text-dark justify-content-center p-2">{myNewsSession ? myNewsSession.charAt(0).toUpperCase() + myNewsSession.slice(1) : "Technology"}</h3>
             <div className="container">
                 {data ? data.articles.map(news => <Fade right><NewsArticle data={news} key={news.url} /></Fade>)
                 :

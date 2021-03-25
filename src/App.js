@@ -22,7 +22,22 @@ function App(){
           <Route exact path="/category" >
             <NewsCategory />
           </Route>
-          <Route exact render={() => <Redirect to={{pathname: `/${mySessData ? mySessData : ""}${mySubTab ? mySessData ? '/'+mySubTab : mySubTab : ""}` }} />}>
+          <Route exact render={() => 
+            <Redirect 
+              to={{
+                pathname: `/${mySessData 
+                ?
+                mySessData 
+                :
+                ""}${mySubTab 
+                ?
+                mySessData
+                ? 
+                '/'+mySubTab 
+                : 
+                mySubTab : ""}` 
+                }} 
+                />}>
             <NewsSubTabsMenuProvider>
               <SubMenu />
             </NewsSubTabsMenuProvider>
